@@ -1,0 +1,47 @@
+create database inventoryjava;
+
+use inventoryjava;
+
+create table admin(
+adminname varchar(20) primary key,
+password varchar(20) not null
+);
+
+insert into admin(adminname,password) values('priti','priti');
+
+create table raw_material
+(
+s_no int(5)  auto_increment,
+m_id int(5) primary key,
+materialtype varchar(30) not null;
+delarname varchar(20) not null,
+contact varchar(10),
+qty varchar(10),
+date varchar(20),
+disc varchar(100),
+price int(8)
+);
+
+create table sale
+(
+id int(5) primary key auto_increment,
+rate values(10),
+customer_id int(4) not null,
+customer_name varchar(10),
+contact varchar(10),
+sale_date varchar(20),
+order varchar(20) not null,
+dty varchar(10),
+amount int(8) not null,
+disc varchar(100),
+m_id int(5)
+);
+
+create table expance
+(
+e_id int(5) primary key auto_increment,
+type_expance varchar(20) not null,
+amount int(10) not null,
+exp_date varchar(20),
+disc varchar(150)
+);
